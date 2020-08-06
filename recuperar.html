@@ -1,8 +1,40 @@
-<HTML>
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="es">
 	<HEAD>
-	<TITLE>ejemplo hola mundo</TITLE>
+		<TITLE>Recuperar contraseña</TITLE>
+		<link rel="stylesheet" type="text/css" href="css/util.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	</HEAD>
 	<BODY>
-	<P>Hola Mundo</P>
+		<div class="d-flex justify-content-center">
+			<div class="jumbotron">
+				<h1 class="display-4">Recuperar contraseña</h1>
+				<p class="lead">Ingrese la clave nueva que desea utilizar, y luego presione en el botón actualizar.</p>
+				<hr class="my-4">
+				<form>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">Contraseña nueva</label>
+					  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Repetir contraseña</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+					</div>
+					<button type="submit" class="btn btn-primary">Actualizar</button>
+				  </form>
+				  <div class="d-flex align-items-end flex-column">
+					  <div class="p-2">
+						<small class="form-text text-muted">Si tenes algun problema con la clave, no dudes en contactar a nuestro <a href="mailto:soporte@qarfinder.com.ar?Subject=Recuperar%20contraseña">soporte técnico</a>.</small>
+					  </div>
+				  		
+				  </div>
+			</div>
+		</div>
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
 	</BODY>
-</HTML>
+</html>
+
