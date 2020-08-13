@@ -17,28 +17,29 @@
 			<div class="form-group">
 				<label>Contraseña nueva</label>
 				<div class="input-group" id="show_hide_password">
-					<input id="txtClave" type="password" class="form-control" placeholder="">
-					<div class="input-group-addon">
-						<a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+					<input id="txtClave" type="password" class="form-control" placeholder="" required="required">
+					<div class="input-group-addon" tabindex="-1">
+						<a tabindex="-1"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
 					</div>
 				</div>
+				<small id="errorTxtClave" class="form-text text-danger" style="display: none;">Ingrese una contraseña</small>
 			</div>
 			<div class="form-group">
 				<label>Repetir contraseña</label>
 				<div class="input-group" id="show_hide_password_repetir">
-					<input id="txtrepetir" type="password" class="form-control" placeholder="">
-					<div class="input-group-addon">
-						<a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+					<input id="txtRepetir" type="password" class="form-control" placeholder="">
+					<div class="input-group-addon" tabindex="-1">
+						<a tabindex="-1"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
 					</div>
 				</div>
+				<small id="errorTxtRepetir" class="form-text text-danger" style="display: none;">Las contraseñas no coinciden</small>
 			</div>
 			<div>
 				<button id="btnActualizar" class="btn btn-primary">Actualizar</button> 
 			</div>
+			
 	</div>
-	<footer class="container">
-	<small class="form-text text-muted">Si tenes algun problema, no dudes en contactar a nuestro <a href="mailto:soporte@qarfinder.com.ar?Subject=Recuperar%20contraseña">soporte técnico</a>. Estamos para ayudarte.</small>
-  </footer>
+	<small style="margin-left: 1%;" class="form-text text-muted">Si tenes algun problema, no dudes en contactar a nuestro <a href="mailto:soporte@qarfinder.com.ar?Subject=Recuperar%20contraseña">soporte técnico</a>. Estamos para ayudarte.</small>
   </body>
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
   <script src="js/recuperar.js"></script>

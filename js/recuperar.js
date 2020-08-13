@@ -1,7 +1,26 @@
 (function ($) {
+    $("#txtClave,#txtRepetir").focus(function() {
+        $("#errorTxtClave").hide();
+        $("#errorTxtRepetir").hide();
+    });
+
+    $("#txtClave").focus();
+
     $("#btnActualizar").click(function() {
         var key = getQueryVariable("key");
         
+        if (!$("#txtClave").val())
+        {
+            $("#errorTxtClave").show();
+            return;
+        }
+
+        if ($("#txtClave").val() !== $("#txtRepetir").val())
+        {
+            $("#errorTxtRepetir").show();
+            return;
+        }
+
         if (key !== undefined)
         {
             sha512($("#txtClave").val()).then(clave => {
@@ -10,6 +29,7 @@
                     "method": "POST",
                     "timeout": 0
                 };
+                $("#txtClave,#txtRepetir").prop("disabled",true);
 
                 $(this).prop("disabled", true);
                 $(this).html(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Actualizando...`);
@@ -52,7 +72,6 @@
         }
     });
 })(jQuery);
-
 
 function sha512(str) {
     return crypto.subtle.digest("SHA-512", new TextEncoder("utf-8").encode(str)).then(buf => {
